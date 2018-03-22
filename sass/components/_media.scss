@@ -1,0 +1,126 @@
+.l-content {
+	.image-gallery {
+		width: 100%;
+		.media[class*="gallery-"] {
+			//width: 200px;
+
+		}
+	}
+    .media {
+        border: $base-border;
+        text-align: left;
+        margin-bottom: $vert-spacing-unit /2;
+        img {
+            height: auto;
+            display: block;
+        }
+
+        a {
+        	border-bottom: 0;
+            + br {
+                display: none;
+                visibility: hidden;
+            }
+        }
+        .caption, .read-more {
+            font-size: $small-font-size;
+            padding: $all-round;
+            margin: 0;
+            p:last-child {
+            	margin: 0;
+            }
+        }
+        .read-more {
+            padding-top: 0;
+        }
+        .button {
+            margin: 0 $horz-spacing-unit $vert-spacing-unit;
+        }
+        &.media-full_no_caption .button {
+            margin: $all-round;
+        }
+        .file {
+            a {
+                padding: $all-round;
+                display: block;
+            }
+            &~ .caption {
+            	padding-top: 0;
+            }
+        }
+        &+ .media {
+            margin-top: $vert-spacing-unit;
+        }
+        .ext-caps {
+            text-transform: uppercase;
+        }
+        .file-size, .file-icon {
+            display: none;
+            visibility: hidden;
+        }
+        .field--name-field-accessible-alternative {
+            .file a {
+                padding-top: 0;
+            }
+        }
+        .document {
+            display: flex;
+            .field--name-field-accessible-alternative {
+            .file a {
+                padding-top: $vert-spacing-unit;
+            }
+        }
+        }
+    }
+    .media-middle {
+        max-width: 265px;
+        width: 50%;
+        overflow: hidden;
+        audio {
+			max-width:263px;
+			width:100%;
+			max-height: 40px;
+		} 
+    }
+    .media-content {
+        border: none;
+        .file a {
+            padding: 0;
+        }
+    }
+    .media-full, .media-full_no_caption {
+        max-width: 645px;
+        margin: $vert-spacing-unit auto;
+        float: none;
+        clear: both;
+        audio {
+			margin: $vert-spacing-unit $horz-spacing-unit 0 $vert-spacing-unit;
+			max-height: 40px;
+		} 
+    }
+    .media-thumbnail {
+        max-width: 170px;
+        width: 50%;
+        img + br {
+            display: none;
+            visibility: hidden;
+        }
+    }
+    .document {
+        display: flex;
+        flex-wrap: wrap;
+        .caption {
+            flex: 1 0 100%;
+            padding-top: $small-spacing;
+        }
+    }
+    .related-content {
+        .document {
+            display: block;
+            .caption {
+                flex: 1 0 100%;
+                padding-top: $vert-spacing-unit;
+            }
+        }
+    }
+}

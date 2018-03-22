@@ -1,0 +1,300 @@
+.view-gallery {
+	clear: both;
+	margin-bottom: $small-spacing;
+	width: 99%;
+	.view-content {
+		margin: 0 auto;
+		.masonry-item {
+			width: 170px;
+			padding: 0;
+			margin: 1%;
+			img {
+				height: auto;
+				display: block;
+			}
+		}
+		
+	}
+}
+.education {
+	.masonry-processed {
+		width: 100% !important;
+	}
+	.masonry-item {
+		width: 49%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		border: 0;
+		background-color: transparent;
+		.education-image, .education-image-2 {
+			flex: 1 0 100%;
+			margin: 0 $horz-spacing-unit $vert-spacing-unit 0;
+			&.landscape.Posters {
+				
+			}
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.education-image-2 {
+			display: none;
+			&.landscape.Posters {
+				display: none;
+			}
+		}
+		.education-image {
+			display: block;
+			&.landscape.Posters {
+				display: block;
+			}
+		}
+		.landscape + .education-body.Posters {
+			display: block;
+			margin-bottom: $vert-spacing-unit;
+			.subtitle {
+				flex: 1 0 30%;
+				margin-right: $horz-spacing-unit;
+			}
+			.exclude-subtitle {
+				flex: 1 0 65%;
+			}
+		}
+		.education-body {
+			flex: 1 0 65%;
+			position: relative;
+			font-size: $base-font-size * 0.8;
+			.subtitle {
+				text-transform: uppercase;
+				font-weight: $light-font-weight;
+				margin: $vert-spacing-unit 0;
+				&:before {
+					content: '';
+					background: $grey;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 45px;
+					height: 2px;
+				}
+			}
+			h2 {
+				font-size: $base-font-size * 1.1;
+				margin: $vert-spacing-unit 0;
+				font-weight: $bold-font-weight;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					margin-bottom: $small-spacing/2;
+					position: relative;
+				}
+				.field--type-text {
+					font-weight: $bold-font-weight;
+					margin: 0 auto 0 0;
+					padding-right: $small-spacing;
+				}
+				.file-size, .file-icon {
+					display: none;
+					visibility: hidden;
+				}
+				.field--name-field-accessible-alternative {
+					margin-left: $small-spacing/1.5;
+				}
+			}
+			ul .file > a, .link a, .ebook a {
+				appearance: none;
+				background-color: $ww1;
+				border: 1px solid $white;
+				color: $white;
+				cursor: pointer;
+				display: inline-block;
+				-webkit-font-smoothing: antialiased;
+				font-weight: 500;
+				line-height: 1;
+				padding: $small-spacing;
+				text-align: center;
+				text-decoration: none;
+				transition: background-color $base-duration $base-timing;
+				user-select: none;
+				vertical-align: middle;
+				white-space: nowrap;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					background-color: lighten($ww1, 10%);
+				}
+				&:active {
+					box-shadow: inset 0 0 10px $black;
+				}
+				&:disabled {
+					cursor: not-allowed;
+					opacity: 0.5;
+
+					&:hover {
+						background-color: $action-color;
+					}
+				}
+			}
+			
+		}
+		
+
+	}
+	&.competitions, &.curriculum {
+		.education-body {
+				h2 {
+					font-size: $base-font-size*1.5;
+					&:before {
+						content: '';
+						background: $grey;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 45px;
+						height: 2px;
+					}
+				}
+				.label {
+					font-weight: $bold-font-weight;
+					text-transform: uppercase;
+				}
+			}
+		}
+}
+.run-ceremony {
+	.education-body {
+		ul {
+				margin: 0;
+				padding: 0;
+				li {
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
+					margin-bottom: $small-spacing/2;
+					position: relative;
+				}
+				.field--type-text {
+					font-weight: $bold-font-weight;
+					margin: 0 auto 0 0;
+					padding-right: $small-spacing;
+				}
+
+			}
+			ul .file > a, .link a, .ebook a {
+				appearance: none;
+				background-color: $ww1;
+				border: 1px solid $white;
+				color: $white;
+				cursor: pointer;
+				display: inline-block;
+				-webkit-font-smoothing: antialiased;
+				font-weight: 500;
+				line-height: 1;
+				padding: $small-spacing;
+				text-align: center;
+				text-decoration: none;
+				transition: background-color $base-duration $base-timing;
+				user-select: none;
+				vertical-align: middle;
+				white-space: nowrap;
+				text-transform: uppercase;
+				&:hover,
+				&:focus {
+					background-color: lighten($ww1, 10%);
+				}
+				&:active {
+					box-shadow: inset 0 0 10px $black;
+				}
+				&:disabled {
+					cursor: not-allowed;
+					opacity: 0.5;
+
+					&:hover {
+						background-color: $action-color;
+					}
+				}
+			}
+			.link a, .ebook a {
+				margin-bottom: $small-spacing/1.5;
+			}
+	}
+}
+@include breakpoint(mobile) {
+	.education {
+	.masonry-item {
+		width: 99%;
+		.education-image, .education-image-2 {
+			flex: 1 0 100%;
+		}
+		.landscape + .education-body.Posters {
+			display: block;
+		}
+		
+	}
+}
+}
+@include breakpoint(tablet) {
+	.view-gallery {
+		.view-content {
+			.masonry-item {
+				width: 140px;
+				&:first-child:nth-last-child(2), &:first-child:nth-last-child(2) ~ .masonry-item {
+					width: 220px;
+				}
+			}
+		}
+	}
+	.education {
+		.masonry-item {
+			.education-image, .education-image-2 {
+			flex: 1 0 30%;
+		}
+			.landscape + .education-body.Posters {
+			display: flex;
+		}
+		.education-image-2 {
+			display: none;
+			&.landscape.Posters {
+				display: block;
+				flex: 1 0 100%;
+			}
+		}
+		.education-image {
+			display: block;
+			&.landscape.Posters {
+				display: none;
+			}
+		}
+		}
+	}
+}
+@include breakpoint(mobile) {
+	.view-gallery {
+
+	.view-content {
+
+		.masonry-item {
+			width: 120px;
+		}
+	}
+}
+}
+@include breakpoint(desktop) {
+	.view-gallery {
+		.view-content {
+			.masonry-item {
+				width: 165px;
+				&:first-child:nth-last-child(3), &:first-child:nth-last-child(3) ~ .masonry-item, {
+					width: 200px;
+				}
+			}
+		}
+	}
+}

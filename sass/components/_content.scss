@@ -1,0 +1,509 @@
+.l-content {
+    //padding: 0;
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        background-color: $white;
+    }
+    .middle {
+        max-width: 265px;
+    }
+    .full {
+        max-width: 645px;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right
+    }
+    .center {
+        margin: 0 auto;
+    }
+    .footnotes, .sources {
+        border-top: $base-border;
+        padding: $vert-spacing-unit  0 $vert-spacing-unit $horz-spacing-unit ;
+        margin: $vert-spacing-unit * 2 0 0;
+        clear: both;
+    }
+    .see-footnote:target, .footnotes .footnote:target {
+        background-color: $light-grey;
+    }
+    .clear {
+    	clear: both;
+    }
+} 
+.node-type-veterans {
+    .pane-node-content {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 0 100%;
+        .field--name-title {
+            flex: 1 0 100%;
+        }
+        .field--name-field-image, .file-image {
+            flex: 0 1 30%;
+            padding-right: $horz-spacing-unit;
+            img {
+                height: auto;
+            }
+        }
+        .vc-body {
+            flex: 0 1 67%;
+            .label {
+                font-weight: $bold-font-weight;
+            }
+        }
+        .vc-map {
+            flex: 1 0 100%;
+        }
+    }
+}
+.node-type-page-content {
+    .center-wrapper {
+        .multimedia-child {
+            flex-wrap: wrap;
+            h1, .field--name-body {
+                flex: 1 0 100%;
+            }
+            .group-body {
+                margin-bottom: $vert-spacing-unit;
+                h2, .subtitle {
+                    flex: 1 0 100%;
+                }
+                .feature-image {
+                    flex: 1 0 25%;
+                    margin-right: $horz-spacing-unit;
+                }
+                .field--name-field-document {
+                    flex: 1 0 70%;
+                }
+            }
+        }
+    }
+    
+}
+.links-portal {
+    .view-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transition: background $base-duration ease;
+        h2 {
+            flex: 1 0 100%;
+        }
+        &> div {
+            flex: 0 1 48%;
+            border-bottom: 5px $light-grey solid;
+            max-width: 350px;
+            margin: $vert-spacing-unit 0;
+            .link {
+                display: flex;
+                flex-direction: column;
+                
+                text-align: center;
+                margin-bottom: $vert-spacing-unit;
+                
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-size: $base-font-size *1.1;
+                    font-weight: $base-font-weight;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        margin-bottom: $small-spacing;
+                    }
+                    
+                }
+            }
+            &:focus, &:hover {
+                color: $black;
+                background-color: $light-grey;
+
+                a {
+                    opacity: 1;
+                    color: $black;
+
+                    img {
+                        opacity: 0.5;
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+}
+.page-multimedia, .section-conduct-event {
+    .header {
+        box-shadow: 0px 1px 10px 0px $black;
+        z-index: 10;
+    }
+}
+.content-full, .node-type-book, .resources, .activities {
+    .header {
+        box-shadow: 0px 1px 10px 0px $black;
+        z-index: 10;
+    }
+    img {
+        display: block;
+        height: auto;
+    }
+    .center-wrapper {
+        padding: $all-round;
+        .multimedia-child, .page-content-child {
+            display: flex;
+        }
+        .page-content-child {
+            flex: 1 0 100%;
+        }
+        .field--name-field-image {
+            flex: 1 0 25%;
+            padding-right: $horz-spacing-unit;
+            
+        }
+
+    }
+    .group-body, .page-content-child .group-body, .education-downloads {
+        flex: 1 0 70%;
+        .field--name-field-document > .field__items > .field__item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: $small-spacing/2;
+            position: relative;
+        }
+        .subtitle {
+            font-weight: $light-font-weight;
+            text-transform: uppercase;
+        }
+        .field--type-text {
+            font-weight: $bold-font-weight;
+            margin: 0 auto 0 0;
+            padding-right: $small-spacing;
+        }
+        .file-size, .file-icon {
+            display: none;
+            visibility: hidden;
+        }
+        .field--name-field-accessible-alternative {
+            margin-left: $small-spacing/1.5;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-bottom: $small-spacing/2;
+                position: relative;
+            }
+            .field--type-text {
+                font-weight: $bold-font-weight;
+                margin: 0 auto 0 0;
+                padding-right: $small-spacing;
+            }
+            .file-size, .file-icon {
+                display: none;
+                visibility: hidden;
+            }
+            .field--name-field-accessible-alternative {
+                margin-left: $small-spacing/1.5;
+            }
+        }
+        ul .file > a, .link a, .ebook a, .file > a {
+            appearance: none;
+            background-color: $ww1;
+            border: 1px solid $white;
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 500;
+            line-height: 1;
+            padding: $small-spacing;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color $base-duration $base-timing;
+            user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-transform: uppercase;
+            &:hover,
+            &:focus {
+                background-color: lighten($ww1, 10%);
+            }
+            &:active {
+                box-shadow: inset 0 0 10px $black;
+            }
+            &:disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+
+                &:hover {
+                    background-color: $action-color;
+                }
+            }
+        }
+        .link a, .ebook a {
+            margin-bottom: $small-spacing/1.5;
+        }
+    }
+}
+.activities {
+    .center-wrapper {
+        padding: 0;
+    }
+}
+.section-conduct-event .pane-event-panel-pane-1 .multimedia-child {
+
+    .subtitle {
+        font-weight: $light-font-weight;
+        text-transform: uppercase;
+    }
+    .veterans-stories {
+        ul {
+            display: flex;
+
+            li {
+
+
+                flex: 1 0 33%;
+                position: relative;
+                max-width: 265px;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                    transform: scale(1);
+                    transition: all 0.3s ease-in-out;
+
+
+
+                }
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: $all-round;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 265px;
+                    background: rgba(0,0,0,  0.5);
+                    &:hover, &:focus {
+
+                        cursor: pointer;
+                    }
+                }
+                h3, h2 {
+                    margin: 0;
+                    font-size: $base-font-size;
+
+                }
+                &:hover, &:focus {
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: $vert-spacing-unit;
+            position: relative;
+        }
+
+        .feature-image {
+            flex: 1 0 25%;
+            padding-right: $horz-spacing-unit;
+            img {
+                height: auto;
+            }
+        }
+        .group-body {
+            flex: 1 0 70%;
+            position: relative;
+            padding-top: $vert-spacing-unit;
+            &:before {
+                content: '';
+                background: $grey;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 45px;
+                height: 2px;
+            }
+        }
+
+    }
+    .field--name-field-document > .field__items > .field__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: $small-spacing/2;
+        position: relative;
+    }
+    .field--type-text {
+        font-weight: $bold-font-weight;
+        margin: 0 auto 0 0;
+        padding-right: $small-spacing;
+    }
+    .file-size, .file-icon {
+        display: none;
+        visibility: hidden;
+    }
+    .field--name-field-accessible-alternative {
+        margin-left: $small-spacing/1.5;
+    }
+    ul .file > a, .link a, .ebook a, .file > a {
+        appearance: none;
+        background-color: $ww1;
+        border: 1px solid $white;
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 500;
+        line-height: 1;
+        padding: $small-spacing;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color $base-duration $base-timing;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        text-transform: uppercase;
+        width: auto;
+        &:hover,
+        &:focus {
+            background-color: lighten($ww1, 10%);
+        }
+        &:active {
+            box-shadow: inset 0 0 10px $black;
+        }
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            &:hover {
+                background-color: $action-color;
+            }
+        }
+    }
+    .link a, .ebook a {
+        margin-bottom: $small-spacing/1.5;
+    }
+}
+.node-type-book {
+
+    .views-row-1 {
+        .file-image img {
+            float: left;
+            margin-right: $horz-spacing-unit;
+            max-width: 40%;
+        }
+    }
+    
+    .center-wrapper {
+        padding: 0;
+    }
+}
+.run-ceremony {
+    margin: $all-round;
+    h2 {
+        font-size: $base-font-size * 1.2;
+    }
+    .education-body {
+        font-size: $base-font-size * 0.8;
+    }
+}
+.entry-form {
+    margin-top: 0;
+    padding-top: $vert-spacing-unit;
+}
+.page-search, .node-type-flash.page-node-443, .node-type-flash.page-node-1377 {
+    .content-wrapper {
+        padding: $all-round;
+    }
+}
+.book-navigation {
+    clear: both;
+    margin-top:  $vert-spacing-unit;
+}
+@include breakpoint(mobile) {
+    .links-portal {
+        .view-content {
+
+            div {
+                flex: 1 0 100%;
+            }
+        }
+    }
+}
+@include breakpoint(tablet) {
+    .entry-form {
+    margin-top: $vert-spacing-unit;
+    padding-top: 0;
+}
+    .links-portal {
+        .view-content {
+
+            div {
+                flex: 0 1 45%;
+                margin: $small-spacing;
+                .link {
+                    margin: 0 0 $vert-spacing-unit;
+                }
+            }
+        }
+    }
+    .node-type-book {
+        .views-row-1 {
+            .file-image {
+                img {
+                    width: 100%;
+                    margin-right: 0;
+                    max-width: 100%;
+                    float: none;
+                }
+            }
+        }
+    }
+}
+@include breakpoint(desktop) {
+    
+    .links-portal {
+        .view-content {
+
+            div {
+              flex: 1 0 48%;
+              margin: $vert-spacing-unit 0;
+          }
+      }
+  }
+}
+

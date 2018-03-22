@@ -1,0 +1,112 @@
+.sub-footer {
+	background-color: $accent;
+	.related-content {
+		max-width: 1140px;
+		margin: 0 auto;
+		h2 {
+			margin-top: 0;
+			padding-top: 0.75em;
+			width: 100%;
+			padding-left: $horz-spacing-unit;
+		}
+		.paragraphs-items > div {
+			
+			&> .field__items {
+				display: flex;
+				flex-wrap: wrap;
+				&> .field__item {
+					flex: 1 0 40%;
+					
+					margin: 0 $horz-spacing-unit $vert-spacing-unit;
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+					&.text-summary-related-content:first-child {
+						flex: 2 1 100%;
+					}
+					ul {
+						margin: 0;
+						padding: 0;
+						li {
+							list-style: none;
+						}
+					}
+					.paragraphs-item-video {
+						.full-video {
+							border: none;
+							margin: 0;
+							.caption, .read-more {
+								padding: $vert-spacing-unit 0 0;
+							}
+							.button {
+								margin: $vert-spacing-unit 0 0;
+							}
+						}
+					}
+					.audio-related-content {
+						overflow: hidden;
+					}
+					.caption, .read-more {
+						padding-top: $vert-spacing-unit;
+						font-size: $small-font-size;
+					}
+					.ext-caps {
+			            text-transform: uppercase;
+			        }
+			        .file-size, .file-icon {
+			            display: none;
+			            visibility: hidden;
+			        }
+			        .field--name-field-document {
+			        	 .field__item {
+			        		padding-bottom: $vert-spacing-unit/2;
+			        		&:last-child {
+			        			padding-bottom: 0;
+			        		}
+			        	}
+			        }
+				}
+			}
+			
+			
+		}
+	}
+}
+@include breakpoint(tablet) {
+	.sub-footer {
+
+	.related-content {
+
+		.paragraphs-items > div {
+			
+			&> .field__items {
+
+				&> .field__item {
+					flex: 1 0 20%;
+					&.image-related-content, &.video-related-content, &.audio-related-content {
+						max-width: 253px;
+						audio {
+							width:100%;
+							max-height: 40px;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+}
+@include breakpoint(desktop) {
+	.sub-footer {
+
+	.related-content {
+
+		h2 {
+			padding-left: 0;
+		}
+	}
+}
+}

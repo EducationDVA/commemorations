@@ -1,0 +1,12 @@
+.subscribe {
+	padding: $all-round;
+	label {
+		text-transform: uppercase;
+		color: $white;
+	}
+	.email {
+		max-width: 300px;
+	}
+}
+@include breakpoint(tablet) {
+}
